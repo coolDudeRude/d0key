@@ -1,0 +1,9 @@
+__pycache__
+.venv
+dist/
+build/
+*.egg-info
+*.d0*
+.coverage
+!tests/data/xonotic_key_0.d0pk
+!tests/data/xonotic_key_0.d0pk.sha256

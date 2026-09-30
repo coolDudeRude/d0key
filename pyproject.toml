@@ -1,0 +1,30 @@
+[project]
+name = "d0key"
+version = "0.1.0"
+description = "Python module to read and write d0_blind_id keys."
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+authors = [
+    { name = "Jiān", email = "coolduderude.null@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=d0key --cov-branch --cov-report=term-missing"
