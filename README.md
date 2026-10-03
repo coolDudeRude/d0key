@@ -1,5 +1,21 @@
 # d0key
 
+> [!WARNING]
+> **`.d0si` files are private keys. Never share them.**
+>
+> Anyone who has a copy of a `.d0si` file can impersonate you. Keep it out of
+> issues, chat messages, screenshots and Git repositories.
+>
+> Writing to a key file can corrupt it, and a corrupted key may be unusable.
+> Always work on a copy (use `-o`, not `--in-place`) and keep a backup of the
+> original. If you don't know what you are doing, don't modify real keys. Use
+> `d0hickey dummy` to create keys for testing.
+>
+> Public keys (`.d0pk`) are meant to be shared, `.d0si` files are not.
+> `d0hickey inspect` prints lump sizes and tags, never the key itself, so its
+> output is safe to paste into a bug report.
+
+
 Python library and command line tool for reading, writing and tagging
 `d0_blind_id` key files (the `d0pk` public key and `d0si` ID files used by
 Xonotic).
@@ -125,9 +141,6 @@ byte-for-byte.
 The other magics (`d0sk`, `d0pi`, `d0iq`, `d0ir`, `d0er`, `d0ic`) are
 recognized, but no lump layout is defined for them yet, so parsing them raises
 `D0UnsupportedTypeError`.
-
-> **Note:** `d0si` files contain a private key. Handle them accordingly.
-> `d0hickey inspect` only prints lump sizes, never their contents.
 
 ### d0tag
 
