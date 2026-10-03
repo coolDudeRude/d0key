@@ -11,6 +11,14 @@ authors = [
 requires-python = ">=3.13"
 dependencies = []
 
+[project.scripts]
+d0hickey = "d0key.__main__:main"
+
+[project.optional-dependencies]
+completion = [
+    "argcomplete>=3.7.2",
+]
+
 
 [build-system]
 requires = ["setuptools>=77.0"]
